@@ -27,10 +27,10 @@ router = APIRouter()
 
 @router.get('/')
 async def home_page():
-    return FileResponse('index.html')
+    return "welcome"
 
 @router.get('/id')
 async def my_empl_id():
-    return {'empl_id':'12345678'}
+    return {'empl_id':'23759741'}
 
 app.include_router(router)
