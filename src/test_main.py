@@ -8,9 +8,9 @@ client = TestClient(app)
 def test_home_page():
     response = client.get("/")
     assert response.status_code == 200
-    assert len(response.text) == os.path.getsize('index.html')
+    assert response.text == "hello"
 
 def test_my_empl_id():
     response = client.get("/id")
     assert response.status_code == 200
-    assert response.json()['empl_id'] == '12345678'
+    assert response.json()['empl_id'] == '23759741'
